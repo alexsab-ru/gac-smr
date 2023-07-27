@@ -9,7 +9,7 @@ function initYandexMap() {
 			var myMap = new ymaps.Map(
 				mapId,
 				{
-					center: [53.184186, 50.152134],
+					center: [53.13776, 50.178113],
 					zoom: 16,
 					controls: ["zoomControl"],
 				},
@@ -19,10 +19,10 @@ function initYandexMap() {
 			);
 			myMap.behaviors.disable("scrollZoom");
 			var myPlacemark1 = new ymaps.Placemark(
-				[53.184186, 50.152134],
+				[53.13776, 50.178113],
 				{
-					balloonContent: "г. Самара, ул. Ново-Урицкая, д. 22",
-					hintContent: "г. Самара, ул. Ново-Урицкая, д. 22",
+					balloonContent: "г. Самара, Южное шоссе, д. 12, стр. 4",
+					hintContent: "г. Самара, Южное шоссе, д. 12, стр. 4",
 				},
 				{
 					iconLayout: "default#image",
