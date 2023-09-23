@@ -160,7 +160,7 @@ $$("form").forEach((form) => {
 		const params = new URLSearchParams([...formData]);
 		var formDataObj = window.WebsiteAnalytics.getFormDataObject(formData, form.id);
 		// await fetch('https://alexsab.ru/lead/test/', {
-		await fetch("https://alexsab.ru/lead/gac-smr/", {
+		await fetch("https://alexsab.ru/lead/gac/smr/", {
 			method: "POST",
 			mode: "cors",
 			cache: "no-cache",
