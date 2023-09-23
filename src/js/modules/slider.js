@@ -16,7 +16,6 @@ if(progressCircle){
 	progressCircle.closest(".autoplay-progress").style.display = "none";
 }
 
-
 const initSlider = () => {
 	bannerSlider = new Swiper(".banner-slider", {
 		modules: [Navigation, Pagination, Autoplay, Parallax],
