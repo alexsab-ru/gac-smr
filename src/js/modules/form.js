@@ -175,21 +175,20 @@ $$("form").forEach((form) => {
 				console.log(data);
 				stateBtn(btn, "Отправить");
 				if (data.answer == "required") {
-					window.WebsiteAnalytics.ymGoal("form-required");
+					window.WebsiteAnalytics.dataLayer("form-required");
 					showErrorMes(form, data.field, data.message);
 					return;
 				} else if (data.answer == "error") {
-					window.WebsiteAnalytics.ymGoal("form-error");
+					window.WebsiteAnalytics.dataLayer("form-error");
 					showMessageModal(messageModal, errorIcon, errorText + "<br>" + data.error);
 				} else {
-					window.WebsiteAnalytics.ymGoal("form-submit");
-					window.WebsiteAnalytics.dataLayer("form_success", formDataObj);
+					window.WebsiteAnalytics.dataLayer("form-success", formDataObj);
 					showMessageModal(messageModal, successIcon, successText);
 				}
 				form.reset();
 			})
 			.catch((error) => {
-				window.WebsiteAnalytics.ymGoal("form-error");
+				window.WebsiteAnalytics.dataLayer("form-error");
 				console.error("Ошибка отправки данных формы: " + error);
 				showMessageModal(messageModal, errorIcon, errorText + "<br>" + error);
 				stateBtn(btn, "Отправить");
